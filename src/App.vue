@@ -1,6 +1,14 @@
 <template>
   <v-app>
-    <v-app-bar app fixed>
+    <v-app-bar
+      app
+      fixed
+      style="
+        color: whitesmoke;
+        background-image: url('https://picsum.photos/1920/1080?random');
+        background-size: cover;
+      "
+    >
       <v-app-bar-nav-icon @click="drawer = !drawer">
         <v-icon>mdi-menu</v-icon>
       </v-app-bar-nav-icon>
