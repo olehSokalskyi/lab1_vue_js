@@ -66,27 +66,26 @@ const shoppingList = ref([
 
 const newItemTitle = ref('')
 
-function addNewItem() {
+const addNewItem = () => {
   if (newItemTitle.value.trim() !== '') {
     shoppingList.value.push({
       id: Date.now(),
       title: newItemTitle.value.trim(),
       bought: false,
     })
-    newItemTitle.value = '' 
+    newItemTitle.value = ''
   }
 }
 
-function doneBought(id) {
+const doneBought = (id) => {
   const item = shoppingList.value.find((item) => item.id === id)
   if (item) {
-    item.bought = !item.bought 
+    item.bought = !item.bought
   }
 }
 
-function deleteItem(id) {
-  shoppingList.value = shoppingList.value.filter((item) => item.id !== id)
-}
+const deleteItem = (id) =>
+  (shoppingList.value = shoppingList.value.filter((item) => item.id !== id))
 
 const shoppingSection = ref([])
 </script>

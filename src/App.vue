@@ -42,6 +42,7 @@ export default {
     items: [
       { title: 'List', icon: 'mdi-format-list-checks', to: '/' },
       { title: 'About', icon: 'mdi-help-box', to: '/about' },
+      { title: 'Student table', icon: 'mdi-table', to: '/students' },
     ],
     right: null,
   }),
